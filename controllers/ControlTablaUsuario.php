@@ -6,7 +6,7 @@ use models\UsuarioModel as UsuarioModel;
 
 require_once("../models/UsuarioModel.php");
 
-class ControlListaUsuario{
+class ControlTablaUsuario{
     public $bt_edit;
     
     public function __construct()
@@ -18,11 +18,11 @@ class ControlListaUsuario{
             session_start();
             $_SESSION['edit']="edit";
             $modelo = new UsuarioModel();
-            $lista = $modelo->listaUsuarios($this->bt_edit);
+            $usuario = $modelo->buscarUsuario($this->bt_edit);
+            $_SESSION['lista']=$usuario[0];
             header("Location:../views/gestionusuario.php");
-            $_SESSION['lista']=$lista[0];
         }
     }
 }
-$obj = new ControlListaUsuario();
+$obj = new ControlTablaUsuario();
 $obj->editar();

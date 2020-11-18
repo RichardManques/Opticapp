@@ -45,8 +45,9 @@ class UsuarioModel{
     }
     
     public function buscarUsuario($rut){
-        $stm = Conexion::conector()->prepare("SELECT rut,nombre FROM usuario WHERE rut=:A");
+        $stm = Conexion::conector()->prepare("SELECT * FROM usuario WHERE rut=:A");
         $stm->bindParam(":A",$rut);
+        $stm->execute();
         return $stm->fetchAll(\PDO::FETCH_ASSOC);
     }
 }
