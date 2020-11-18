@@ -10,6 +10,7 @@ $lista = $model->listaUsuarios();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Gestion Usuario</title>
 </head>
 <body>
@@ -19,12 +20,27 @@ $lista = $model->listaUsuarios();
 ?>
 <nav>
     <div class="nav-wrapper">
-        <a class="brand-logo center">GESTION USUARIO</a>
+        <a class="brand-logo center">Gestion usuario</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="saliradmin.php">Salir</a></li>
         </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
 </nav>
+<!--INICIO BARRA MOVIL-->
+<ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+    <div class="background">
+        <img src="../img/fondo.jpg">
+    </div>
+        <a href="#user"><img class="circle" src="../img/avatar.png"></a>
+        <a href="#name"><span class="white-text name"></span></a>
+        <a href="#email"><span class="white-text email"></span></a>
+    </div>
+    </li>
+        <li><a href="saliradmin.php">Cerrar sesión</a></li>
+    </ul>
+<!---FIN BARRA MOVIL-->
 <div class="container">
     <div class="row">
         <div class="col l4 m4 s12">
@@ -139,5 +155,11 @@ $lista = $model->listaUsuarios();
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://kit.fontawesome.com/254082c399.js" crossorigin="anonymous"></script>
 <script src="../js/gestionusuario.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+    });
+</script>
 </body>
 </html>

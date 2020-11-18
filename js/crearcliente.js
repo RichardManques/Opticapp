@@ -14,4 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
             done:'Confirmar'
         }
     });
+    });  
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        
     });

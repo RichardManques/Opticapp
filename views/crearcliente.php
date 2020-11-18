@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Ingresar Cliente</title>
 </head>
 <body>
@@ -12,14 +13,33 @@
         if(isset($_SESSION['usuario'])){?>
     <nav class="barra">
     <div class="nav-wrapper">
+    <a class="brand-logo center">Hola <?=$_SESSION['usuario']['nombre']?></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="crearcliente.php">Crear cliente</a></li>
             <li><a href="#">Buscar receta</a></li>
             <li><a href="#">Ingreso</a></li>
             <li><a href="saliruser.php">Salir</a></li>
         </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
     </nav>
+    <!--BARRA MOVIL-->
+    <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+    <div class="background">
+        <img src="../img/fondo.jpg">
+    </div>
+        <a href="#user"><img class="circle" src="../img/user.png"></a>
+        <a href="#name"><span class="white-text name"><?=$_SESSION['usuario']['nombre']?></span></a>
+        <a href="#email"><span class="white-text email"><?=$_SESSION['usuario']['rut']?></span></a>
+    </div>
+    </li>
+    <li class="active"><a href="crearcliente.php">Crear cliente</a></li>
+            <li><a href="#">Buscar receta</a></li>
+            <li><a href="#">Ingreso</a></li>
+            <li><a href="saliruser.php">Cerrar sesión</a></li>
+    </ul>
+    <!--FIN BARRA MOVIL-->
     <div class="container">
         <div class="row">
             <div class="col l4 m4 s12">
@@ -89,5 +109,11 @@
     <?php } ?>
 <script src="../js/crearcliente.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+    });
+</script>
 </body>
 </html>
