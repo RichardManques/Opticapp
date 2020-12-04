@@ -17,7 +17,7 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="crearcliente.php">Crear cliente</a></li>
             <li><a href="#">Buscar receta</a></li>
-            <li><a href="#">Ingreso</a></li>
+            <li><a href="crearreceta.php">Ingresar receta</a></li>
             <li><a href="saliruser.php">Salir</a></li>
         </ul>
         <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -35,8 +35,8 @@
     </div>
     </li>
     <li class="active"><a href="crearcliente.php">Crear cliente</a></li>
-            <li><a href="#">Buscar receta</a></li>
-            <li><a href="#">Ingreso</a></li>
+            <li><a href="#">Buscar</a></li>
+            <li><a href="crearreceta.php">Ingresar receta</a></li>
             <li><a href="saliruser.php">Cerrar sesión</a></li>
     </ul>
     <!--FIN BARRA MOVIL-->

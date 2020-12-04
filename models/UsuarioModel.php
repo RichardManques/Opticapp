@@ -14,8 +14,7 @@ class UsuarioModel{
     }
     
     public function iniciarSesionUser($rut,$clave){
-        //SELECT * FROM `usuario` WHERE rut='16.731.765-0' AND clave=md5('123456') AND rol='vendedor' para iniciar solamente como vendedor, si tiene estado 0 no puede iniciar sesion
-        $stm = Conexion::conector()->prepare("SELECT * FROM usuario WHERE rut=:A AND clave=:B AND estado=1");
+        $stm = Conexion::conector()->prepare("SELECT * FROM usuario WHERE rut=:A AND clave=:B AND estado=1 AND rol='vendedor'");
         $stm->bindParam(":A",$rut);
         $stm->bindParam(":B",md5($clave));
         $stm->execute();
@@ -23,7 +22,6 @@ class UsuarioModel{
     }
 
     public function iniciarSesionAdmin($rut,$clave){
-        //SELECT * FROM `usuario` WHERE rut='admin' AND clave=md5('admin') AND rol='administrador' para iniciar sesion solo como administrador
         $stm = Conexion::conector()->prepare("SELECT * FROM usuario WHERE rut=:A AND clave=:B AND rol='administrador' AND estado=1");
         $stm->bindParam(":A",$rut);
         $stm->bindParam(":B",md5($clave));

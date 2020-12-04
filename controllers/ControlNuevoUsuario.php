@@ -17,7 +17,6 @@ class ControlNuevoUsuario{
 
     public function registrarUsuario(){
         session_start();
-
         if($this->rut=="" || $this->nombre==""){
             $_SESSION['error']="Campos vacíos";
             header("Location:../views/gestionusuario.php");
