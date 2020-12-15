@@ -50,7 +50,7 @@ class ControlNuevaReceta{
         $this->fecha_retiro = $_POST['fechare'];
         $this->observacion = $_POST['observacion'];
         $this->rut_cliente = $_POST['rutcliente'];
-        $this->fecha_vis_med = $_POST['fechavismed'];
+        $this->fecha_vis_med = $_POST['fechamed'];
         $this->rut_medico = $_POST['rutmed'];
         $this->nombre_med = $_POST['nombremed'];
         $this->rut_usuario = $_POST['rutusuario'];
@@ -76,7 +76,7 @@ class ControlNuevaReceta{
                 'cilindroode'=>$this->cilindroode,'ejeoiz'=>$this->ejeoiz,'ejeode'=>$this->ejeode,'prisma'=>$this->prisma,'base'=>$this->base,
                 'armazon'=>$this->armazon,'materialcristal'=>$this->material_cristal,'tipocristal'=>$this->tipo_cristal,'distanciapupilar'=>$this->distancia_pupilar,
                 'valorlente'=>$this->valor_lente,'fechaentrega'=>$this->fecha_entrega,'fecharetiro'=>$this->fecha_retiro,'observacion'=>$this->observacion,'rutcliente'=>$this->rut_cliente,
-                'fechavismed'=>$this->fecha_vis_med,'rutmedico'=>$this->rut_medico,'nombremedico'=>$this->nombre_med,'rutusuario'=>$this->rut_usuario
+                'fechamed'=>$this->fecha_vis_med,'rutmedico'=>$this->rut_medico,'nombremedico'=>$this->nombre_med,'rutusuario'=>$this->rut_usuario
             ];
 
             $count = $model->nuevaReceta($data);

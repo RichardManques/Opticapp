@@ -46,7 +46,7 @@ print_r($receta);*/
     <a class="brand-logo center">Ingresar receta</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="crearcliente.php">Crear cliente</a></li>
-            <li><a href="#">Buscar receta</a></li>
+            <li><a href="buscarreceta.php">Buscar receta</a></li>
             <li class="active"><a href="crearreceta.php">Ingresar receta</a></li>
             <li><a href="saliruser.php">Salir</a></li>
         </ul>
@@ -65,7 +65,7 @@ print_r($receta);*/
     </div>
     </li>
     <li><a href="crearcliente.php">Crear cliente</a></li>
-            <li><a href="#">Buscar</a></li>
+            <li><a href="#">Buscar receta</a></li>
             <li class="active"><a href="crearreceta.php">Ingresar receta</a></li>
             <li><a href="saliruser.php">Cerrar sesión</a></li>
     </ul>
@@ -185,8 +185,8 @@ print_r($receta);*/
             </div>
             
             <div class="input-field">
-                <input id="fechavismed" type="text" name="fechavismed" class="datepicker">
-                <label for="fechavismed">Fecha visita medico</label>
+                <input id="fechamed" type="text" name="fechamed" class="datepicker">
+                <label for="fechamed">Fecha visita medico</label>
             </div>
 
             <div class="input-field">
@@ -218,7 +218,7 @@ print_r($receta);*/
                             echo $_SESSION['resp'];
                             unset($_SESSION['resp']);
                         }
-                    ?>
+                ?>
                 </p>
             </div>
         </div>
@@ -229,6 +229,12 @@ print_r($receta);*/
     var elems = document.querySelectorAll('.sidenav');
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems);
+    var instances = M.Sidenav.init(elems);
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems);
     });
 </script>

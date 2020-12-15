@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="../img/favicon.ico"/>
     <title>Ingresar Cliente</title>
 </head>
 <body>
@@ -13,10 +14,10 @@
         if(isset($_SESSION['usuario'])){?>
     <nav class="barra">
     <div class="nav-wrapper">
-    <a class="brand-logo center">Hola <?=$_SESSION['usuario']['nombre']?></a>
+    <a class="brand-logo center">Vendedor <?=$_SESSION['usuario']['nombre']?></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li class="active"><a href="crearcliente.php">Crear cliente</a></li>
-            <li><a href="#">Buscar receta</a></li>
+            <li><a href="buscarreceta.php">Buscar receta</a></li>
             <li><a href="crearreceta.php">Ingresar receta</a></li>
             <li><a href="saliruser.php">Salir</a></li>
         </ul>
@@ -35,7 +36,7 @@
     </div>
     </li>
     <li class="active"><a href="crearcliente.php">Crear cliente</a></li>
-            <li><a href="#">Buscar</a></li>
+            <li><a href="buscarreceta.php">Buscar receta</a></li>
             <li><a href="crearreceta.php">Ingresar receta</a></li>
             <li><a href="saliruser.php">Cerrar sesión</a></li>
     </ul>

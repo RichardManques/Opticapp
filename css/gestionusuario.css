@@ -1,0 +1,34 @@
+
+.sidenav{
+    background: rgba(255, 255, 255, 0.801);
+}
+
+nav{
+    background:rgb(42, 196, 142);
+}
+
+ul li i{
+    margin-right: 20px;
+}
+
+ul li a{
+    margin-bottom: 50%;
+    color: black;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 25px;
+}
+nav div .gestion{
+    color: black;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 40px;
+}
+
+ul li .logout{
+    font-size: 20px;
+    color: black;
+}
+
+ul div img{
+    width: 100%;
+    height: 100%;
+}
