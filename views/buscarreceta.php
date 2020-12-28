@@ -54,7 +54,7 @@
                     <form @submit.prevent="buscarFecha">
                         <div class="input-field">
                             <input type="text" class="datepicker" v-model="fecha" id="buscar_fecha">
-                            <label for="fecha">Fecha creación</label>
+                            <label for="fecha">Fecha de entrega</label>
                         </div>
                         <button class="btn black ancho-100">
                             buscar

@@ -1,7 +1,7 @@
 new Vue({
   el: "#app",
   data: {
-    url: "http://localhost:82/opticapp/",
+    url: "http://mysql:host=bm4zscbkudhtv5p4x5wc-mysql.services.clever-cloud.com;dbname=optica_2020:82/opticapp/",
     rut: "",
     recetas: [],
     receta: {},
