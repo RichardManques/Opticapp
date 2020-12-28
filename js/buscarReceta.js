@@ -1,7 +1,7 @@
 new Vue({
   el: "#app",
   data: {
-    url: "mysql:host=bm4zscbkudhtv5p4x5wc-mysql.services.clever-cloud.com;dbname=bm4zscbkudhtv5p4x5wc",
+    url: "https://opticaapp.herokuapp.com/controllers/ControlBuscarPorRut.php",
     rut: "",
     recetas: [],
     receta: {},
