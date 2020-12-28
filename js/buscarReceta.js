@@ -1,7 +1,7 @@
 new Vue({
   el: "#app",
   data: {
-    url: "https://opticaapp.herokuapp.com/controllers/ControlBuscarPorRut.php",
+    url: "https://opticaapp.herokuapp.com/controllers/",
     rut: "",
     recetas: [],
     receta: {},
