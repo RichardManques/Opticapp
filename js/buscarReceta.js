@@ -1,7 +1,7 @@
 new Vue({
   el: "#app",
   data: {
-    url: "https://opticaapp.herokuapp.com/controllers/",
+    url: "https://opticaapp.herokuapp.com/js/buscarReceta.js",
     rut: "",
     recetas: [],
     receta: {},
